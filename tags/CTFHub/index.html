@@ -1755,7 +1755,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1694540958982),
+    lastupdate: new Date(1696349754885),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2515,9 +2515,259 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/03/CTFHub-9/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Artemis">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Artemis">
+    <meta itemprop="description" content="最是人间留不住，朱颜辞镜花辞树。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/10/03/CTFHub-9/"  itemprop="url">
+        CTFHub-9
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        upload一、无验证&#x2F;前端验证
+无验证：直接上传一句话木马.php，再用蚁剑连接。
+前端验证：尝试上传.php发现无法上传，通过view-source:url 发现可以上传.jpg文件，将.php改为.jpg再进行bp抓包，修改filename&#x3D;”1.php”和Content-Type: php，放包，蚁剑连接。
+
+
+二、.htaccess
+htaccess文件是Apa...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-10-03T22:48:35+08:00">2023-10-03</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/10/03/CTFHub-9/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/25/CTFHub-8/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Artemis">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Artemis">
+    <meta itemprop="description" content="最是人间留不住，朱颜辞镜花辞树。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/09/25/CTFHub-8/"  itemprop="url">
+        CTFHub-8
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        XSS
+漏洞原理：XSS指跨站脚本攻击，主要基于javascript语言完成恶意的攻击行为，因为javascript可以非常灵活的操作html、css和浏览器。XSS利用网页开发时留下的漏洞，巧妙的将恶意代码注入到网页中，因为浏览器不会判断代码是否恶意，只要代码符合语法规则，浏览器就会解析这段XSS代码，以达到攻击的效果。
+
+一、反射型
+反射型XSS是一种非持久型XSS，是最容易出现的一种X...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-09-25T20:36:09+08:00">2023-09-25</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/09/25/CTFHub-8/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/17/CTFHub-7/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Artemis">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Artemis">
+    <meta itemprop="description" content="最是人间留不住，朱颜辞镜花辞树。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/09/17/CTFHub-7/"  itemprop="url">
+        CTFHub-7
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        信息泄露SVN泄露
+当开发人员使用 SVN 进行版本控制，对站点自动部署。如果配置不当,可能会将.svn文件夹直接部署到线上环境。这就引起了 SVN 泄露漏洞。
+
+方法一
+先用disrearch扫描
+根据提示发现Flag在服务器旧版本的源代码中
+使用kali-linux系统使用Perl配置环境。在kali中下载工具dvcs-ripper。
+在终端打开工具所在目录，并安装工具所依赖库：sudo...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-09-17T16:15:24+08:00">2023-09-17</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/09/17/CTFHub-7/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/16/CTFHub-6/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Artemis">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Artemis">
+    <meta itemprop="description" content="最是人间留不住，朱颜辞镜花辞树。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/09/16/CTFHub-6/"  itemprop="url">
+        CTFHub-6
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        信息泄露Git泄露log、stash、index
+当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用BugScanTeam的GitHack完成本题
+
+御剑扫描只扫描出 URL&#x2F;index.html
+改用dirsearch目录扫描
+1python3 dirsearch.py -u &lt...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-09-16T19:44:59+08:00">2023-09-16</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/09/16/CTFHub-6/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -2623,10 +2873,10 @@ rar
   <div class='md article-desc' itemprop="articleBody">
     
       
-        SQL注入二、报错注入方法一	SQLmap注入1python sqlmap.py -u &quot;http://challenge-edf7e3fef5ffee34.sandbox.ctfhub.com:10080/?id=-1&quot; -D sqli  -T flag  -C flag --dump
+        SQL注入一、整数型注入方法一	SQL注入1、SQLmap爆出数据库信息
+1python sqlmap.py -u &quot;http://challenge-f6ea6271f47a5c21.sandbox.ctfhub.com:10080/?id=1&quot; --current-db
 
-方法二	手动注入1、查询当前使用的数据库：sqli
-12-1 union sele...
+12[16:29:30] [INFO] fetching current databasecur...
       
     
   </div>

