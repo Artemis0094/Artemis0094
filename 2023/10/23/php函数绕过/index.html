@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/archives/page/3/"/>
+  
+  <link rel="canonical" href="http://example.com/2023/10/23/php函数绕过/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,17 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive - Artemis</title>
+  <title>php函数绕过 - Artemis</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="最是人间留不住，朱颜辞镜花辞树。 - weiwei - Artemis">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Artemis">
-<meta property="og:url" content="http://example.com/archives/page/3/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php函数绕过">
+<meta property="og:url" content="http://example.com/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/index.html">
 <meta property="og:site_name" content="Artemis">
-<meta property="og:description" content="最是人间留不住，朱颜辞镜花辞树。">
+<meta property="og:description" content="(&#x3D;&#x3D;)与is_number() 弱等于(&#x3D;&#x3D;)判断的时候，如果两边的类型不同，则先是将类型转换成相同的，再进行比较 强等于(&#x3D;&#x3D;&#x3D;)判断的时候，先判断类型是否一样，不一样直接false，一样才比较。  php弱等于里面，默认类型转换时的将字符串转换成数字的机制是这样的： 1&#x3D;&#x3D;“1admin” &#x2F;&#x2F;true">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-10-22T16:09:39.000Z">
+<meta property="article:modified_time" content="2023-10-22T16:27:10.252Z">
 <meta property="article:author" content="weiwei">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2178,7 +2180,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2442,7 +2444,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2497,578 +2499,245 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-	  <article id="arc" class="post article white-box reveal shadow floatable blur">
-			
-			
-				
-				
-					
-						
-						<h2>2023</h2>
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/">
-									<time>10-23</time>
-									
-										php函数绕过
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/10/16/%E6%9E%81%E5%AE%A219-PHP/">
-									<time>10-16</time>
-									
-										极客19-PHP
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/10/09/CTFHub-11/">
-									<time>10-09</time>
-									
-										CTFHub-11
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/10/07/CTFHub-10/">
-									<time>10-07</time>
-									
-										CTFHub-10
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/10/03/CTFHub-9/">
-									<time>10-03</time>
-									
-										CTFHub-9
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/09/25/CTFHub-8/">
-									<time>09-25</time>
-									
-										CTFHub-8
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/09/17/CTFHub-7/">
-									<time>09-17</time>
-									
-										CTFHub-7
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/09/16/CTFHub-6/">
-									<time>09-16</time>
-									
-										CTFHub-6
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/09/13/CTFHub-5/">
-									<time>09-13</time>
-									
-										CTFHub-5
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/09/12/CTFHub-4/">
-									<time>09-12</time>
-									
-										CTFHub-4
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/09/11/CTFHub-3/">
-									<time>09-11</time>
-									
-										CTFHub-3
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/09/10/CTFHub-2/">
-									<time>09-10</time>
-									
-										CTFHub-2
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/09/10/SICTF-Web-Include/">
-									<time>09-10</time>
-									
-										SICTF-Web-Include
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/09/10/CTFHub-1/">
-									<time>09-10</time>
-									
-										CTFHub-1
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/09/04/Redis%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E/">
-									<time>09-04</time>
-									
-										Redis未授权访问漏洞
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/08/29/%E5%A4%96%E7%BD%91%E6%B8%97%E9%80%8F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">
-									<time>08-29</time>
-									
-										外网渗透信息收集
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/08/29/kali-docker/">
-									<time>08-29</time>
-									
-										kali-docker
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/04/01/mysql-2-0/">
-									<time>04-01</time>
-									
-										mysql-2.0
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/03/31/mysql-1-0/">
-									<time>03-31</time>
-									
-										mysql 1.0
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						
-						<h2>2022</h2>
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/25/Hackergame-%E6%97%85%E8%A1%8C%E7%85%A7%E7%89%872-0/">
-									<time>11-25</time>
-									
-										Hackergame-旅行照片2.0
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/24/Hackergame-Xcaptcha/">
-									<time>11-24</time>
-									
-										Hackergame-Xcaptcha
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/22/Hackegame-HeiLang/">
-									<time>11-22</time>
-									
-										Hackegame-HeiLang
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/07/Hackergame-%E7%AD%BE%E5%88%B0/">
-									<time>11-07</time>
-									
-										Hackergame2022_签到
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/02/c-4/">
-									<time>11-02</time>
-									
-										c-4
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/02/c-3/">
-									<time>11-02</time>
-									
-										c-3
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/10/23/virtual%20machine/">
-									<time>10-23</time>
-									
-										how to build virtual machine
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/10/21/web-3/">
-									<time>10-21</time>
-									
-										web_3
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/10/13/c-2/">
-									<time>10-13</time>
-									
-										c-2
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/10/13/c-1/">
-									<time>10-13</time>
-									
-										c-1
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/10/10/web-2/">
-									<time>10-10</time>
-									
-										web_2
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/10/03/web-1/">
-									<time>10-03</time>
-									
-										web_1_10_3
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/09/29/self-introduction/">
-									<time>09-29</time>
-									
-										Make a self-introduction
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/09/27/MarkDown/">
-									<time>09-27</time>
-									
-										MarkDown
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/09/26/the%20experience/">
-									<time>09-26</time>
-									
-										The Experience Of Building a Blog
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/09/19/hello-world/">
-									<time>09-19</time>
-									
-										Hello World
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-	  </article>
-	
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/23/php函数绕过/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Artemis">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Artemis">
+    <meta itemprop="description" content="最是人间留不住，朱颜辞镜花辞树。">
+  </span>
+  
+
+
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        php函数绕过
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-23T00:09:39+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Oct 23, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="x3D-x3D-与is-number"><a href="#x3D-x3D-与is-number" class="headerlink" title="(&#x3D;&#x3D;)与is_number()"></a>(&#x3D;&#x3D;)与is_number()</h2><blockquote>
+<p>弱等于(&#x3D;&#x3D;)判断的时候，如果两边的类型不同，则先是将<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2&spm=1001.2101.3001.7020">类型转换</a>成相同的，再进行比较</p>
+<p>强等于(&#x3D;&#x3D;&#x3D;)判断的时候，先判断类型是否一样，不一样直接false，一样才比较。</p>
+<p> php弱等于里面，默认类型转换时的将字符串转换成数字的机制是这样的：</p>
+<pre><code>1==“1admin” //true           
+1==“admin”  //false
+1==“admin1” //false
+</code></pre>
+</blockquote>
+<p>is_number()函数的绕过类似于弱等于</p>
+<hr>
+<h2 id="strcmp"><a href="#strcmp" class="headerlink" title="strcmp"></a>strcmp</h2><p>int strcmp(string $str1,string $str2)</p>
+<p>如果字符串str小于字符串str2 则会返回 &lt; 0；反之则返回 &gt; 0；如果两者相等，返回 0。</p>
+<blockquote>
+<p>在php5.3以上却有了一个绕过，即传入不是字符串的比较会报错返回一个0.</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">$a=$_REQUEST[&#x27;str&#x27;]</span><br><span class="line"></span><br><span class="line">$b=&#x27;xxx&#x27;;</span><br><span class="line"></span><br><span class="line">if (strcmp($a,$b)==0)&#123;</span><br><span class="line"></span><br><span class="line">echo &quot;flag:xxxxx&quot;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>传入一个str[]，str[]&#x3D;12,str&#x3D;123,都会成功.</p>
+<p>当然下现在的php7不存在这样的绕过了</p>
+<hr>
+<h2 id="例：极客大挑战-BUY-FLAG"><a href="#例：极客大挑战-BUY-FLAG" class="headerlink" title="例：极客大挑战-BUY FLAG"></a>例：极客大挑战-BUY FLAG</h2><p>需要满足：</p>
+<blockquote>
+<p>1、You must be a student from CUIT!!!<br>2、You must be answer the correct password!!! </p>
+<p>3、Flag need your 100000000 money</p>
+</blockquote>
+<p>条件1在抓包后将cookie值改为1</p>
+<p>条件2post传参password&#x3D;404a绕过</p>
+<p>条件3post传参money&#x3D;100000000</p>
+<p>但提交后发现length is too long</p>
+<p>发现php版本为5.3.3，考虑用strcmp绕过</p>
+<p>money[]&#x3D;1&amp;password&#x3D;404a</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-23T00:27:10+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Oct 23, 2023</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/&title=php函数绕过 - Artemis&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/&title=php函数绕过 - Artemis&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/&title=php函数绕过 - Artemis&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/10/16/%E6%9E%81%E5%AE%A219-PHP/'>
+          <p class='title'>极客19-PHP<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>[极客大挑战 2019]PHP良好的备份网站的习惯：备份文件，dirsearch扫描 or bp爆破 得出为www.zip
+class.php
+1234567891011121314151617...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3077,112 +2746,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Artemis</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/BUUCTF-%E5%BA%8F%E5%88%97%E5%8C%96/" style="font-size: 14px; color: #999">-BUUCTF -序列化</a> <a href="/tags/CTFHub/" style="font-size: 24px; color: #555">-CTFHub</a> <a href="/tags/c/" style="font-size: 21.5px; color: #666">c</a> <a href="/tags/life/" style="font-size: 14px; color: #999">life</a> <a href="/tags/mysql/" style="font-size: 16.5px; color: #888">mysql</a> <a href="/tags/web/" style="font-size: 19px; color: #777">web</a> <a href="/tags/work/" style="font-size: 21.5px; color: #666">work</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#x3D-x3D-%E4%B8%8Eis-number"><span class="toc-text">(&#x3D;&#x3D;)与is_number()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#strcmp"><span class="toc-text">strcmp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%EF%BC%9A%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-BUY-FLAG"><span class="toc-text">例：极客大挑战-BUY FLAG</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3210,13 +2815,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3225,14 +2831,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3990,7 +3596,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/archives/","name":"Archive"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/10/23/php函数绕过/","name":"php函数绕过"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"php函数绕过","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/","wordCount":0,"datePublished":"2023-10-22T16:09:39.000Z","dateModified":"2023-10-22T16:27:10.252Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
