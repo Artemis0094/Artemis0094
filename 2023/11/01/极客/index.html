@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/10/16/极客19-php/"/>
+  <link rel="canonical" href="http://example.com/2023/11/01/极客/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,21 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>极客19-PHP - Artemis</title>
-  <meta name="keywords" content="-BUUCTF -序列化,null">
+  <title>极客 - Artemis</title>
+  <meta name="keywords" content="-php -序列化 -http,null">
   <meta desc name="description" content="最是人间留不住，朱颜辞镜花辞树。 - weiwei - Artemis">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="极客19-PHP">
-<meta property="og:url" content="http://example.com/2023/10/16/%E6%9E%81%E5%AE%A219-PHP/index.html">
+<meta property="og:title" content="极客">
+<meta property="og:url" content="http://example.com/2023/11/01/%E6%9E%81%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Artemis">
 <meta property="og:description" content="[极客大挑战 2019]PHP良好的备份网站的习惯：备份文件，dirsearch扫描 or bp爆破 得出为www.zip class.php 123456789101112131415161718192021222324252627282930313233343536373839404142&lt;?phpinclude &amp;#x27;flag.php&amp;#x27;;error_reporting(">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-10-16T13:08:21.000Z">
-<meta property="article:modified_time" content="2023-10-16T13:21:28.370Z">
+<meta property="article:published_time" content="2023-11-01T13:08:21.000Z">
+<meta property="article:modified_time" content="2023-11-01T15:42:00.648Z">
 <meta property="article:author" content="weiwei">
-<meta property="article:tag" content="-BUUCTF -序列化">
+<meta property="article:tag" content="-php -序列化 -http">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1758,7 +1758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698079000993),
+    lastupdate: new Date(1704196168393),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2501,7 +2501,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/16/极客19-PHP/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/01/极客/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Artemis">
   </span>
@@ -2522,7 +2522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        极客19-PHP
+        极客
       </h1>
       <div class='new-meta-box'>
         
@@ -2543,10 +2543,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-16T21:08:21+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-11-01T21:08:21+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Oct 16, 2023</p>
+    <p>发布于：Nov 1, 2023</p>
   </a>
 </div>
 
@@ -2585,6 +2585,49 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>另外我们还需要绕过wakeup方法 在反序列化字符串时，属性个数的值大于实际属性个数时，会跳过 wakeup()函数的执行</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?select=O:4:&quot;Name&quot;:3:&#123;s:14:&quot;%00Name%00username&quot;;s:5:&quot;admin&quot;;s:14:&quot;%00Name%00password&quot;;i:100;&#125;</span><br></pre></td></tr></table></figure>
 
+<hr>
+<p>##[极客大挑战 2023]EzHttp</p>
+<ol>
+<li><p>F12，说怕爬虫，扫描一下，发现robots.txt，访问得到admin&amp;password</p>
+</li>
+<li><p>post传参，bp抓包，说必须来源于sycsec.com，修改Referer: sycsec.com</p>
+</li>
+<li><p>请使用Syclover浏览器，修改User-Agent: Syclover</p>
+</li>
+<li><p>请从localhost访问，添加X-Forwarded-For:127.0.0.1</p>
+</li>
+<li><p>请使用Syc.vip代理，添加via:Syc.vip</p>
+</li>
+<li><p>$_SERVER[‘HTTP_O2TAKUXX’]&#x3D;&#x3D;”GiveMeFlag”<img src="/%E6%9E%81%E5%AE%A219-PHP.assets/image-20231030225445256.png" class="lazyload" data-srcset="/%E6%9E%81%E5%AE%A219-PHP.assets/image-20231030225445256.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20231030225445256"></p>
+<p>添加[Get] ?HTTP_O2TAKUXX&#x3D;GiveMeFlag,添加头部 O2TAKUXX:GiveMeFlag</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">POST /?syc=Welcome%20to%20geek%202023!&amp;lover=1e10 HTTP/2</span><br><span class="line">Host: jqsrtiggxn31oj2roa23u05pl.node.game.sycsec.com</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Referer: https://jqsrtiggxn31oj2roa23u05pl.node.game.sycsec.com/?syc=Welcome%20to%20geek%202023!&amp;lover=1e10</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Content-Length: 44</span><br><span class="line">Origin: https://jqsrtiggxn31oj2roa23u05pl.node.game.sycsec.com</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">Sec-Fetch-Dest: document</span><br><span class="line">Sec-Fetch-Mode: navigate</span><br><span class="line">Sec-Fetch-Site: same-origin</span><br><span class="line">Pragma: no-cache</span><br><span class="line">Cache-Control: no-cache</span><br><span class="line">Te: trailers</span><br><span class="line">Connection: close</span><br><span class="line"></span><br><span class="line">qw=1&amp;yxx=1&amp;SYC_GEEK.2023=Happy+to+see+you%21</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p>#[极客大挑战 2023]easy—php</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">header(&#x27;Content-type:text/html;charset=utf-8&#x27;);</span><br><span class="line">error_reporting(0);</span><br><span class="line"></span><br><span class="line">highlight_file(__FILE__);</span><br><span class="line">include_once(&#x27;flag.php&#x27;);</span><br><span class="line">if(isset($_GET[&#x27;syc&#x27;])&amp;&amp;preg_match(&#x27;/^Welcome to GEEK 2023!$/i&#x27;, $_GET[&#x27;syc&#x27;]) &amp;&amp; $_GET[&#x27;syc&#x27;] !== &#x27;Welcome to GEEK 2023!&#x27;) &#123;</span><br><span class="line">    if (intval($_GET[&#x27;lover&#x27;]) &lt; 2023 &amp;&amp; intval($_GET[&#x27;lover&#x27;] + 1) &gt; 2024) &#123;</span><br><span class="line">        if (isset($_POST[&#x27;qw&#x27;]) &amp;&amp; $_POST[&#x27;yxx&#x27;]) &#123;</span><br><span class="line">            $array1 = (string)$_POST[&#x27;qw&#x27;];</span><br><span class="line">            $array2 = (string)$_POST[&#x27;yxx&#x27;];</span><br><span class="line">            if (sha1($array1) === sha1($array2)) &#123;</span><br><span class="line">                if (isset($_POST[&#x27;SYC_GEEK.2023&#x27;])&amp;&amp;($_POST[&#x27;SYC_GEEK.2023&#x27;]=&quot;Happy to see you!&quot;)) &#123;</span><br><span class="line">                    echo $flag;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    echo &quot;再绕最后一步吧&quot;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                echo &quot;好哩，快拿到flag啦&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            echo &quot;这里绕不过去，QW可不答应了哈&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        echo &quot;嘿嘿嘿，你别急啊&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;else &#123;</span><br><span class="line">    echo &quot;不会吧不会吧，不会第一步就卡住了吧，yxx会瞧不起你的！&quot;;</span><br><span class="line">&#125;</span><br><span class="line">?&gt; </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>preg_match()</p>
+<p>​	&#x2F;u :表示按照unicode，UTF-8的规则匹配，如汉字的匹配</p>
+<p>​	&#x2F;i：表示匹配时不区分大小写，如URL的匹配</p>
+<p>​	&#x2F;s: 表示把字符串视作单行</p>
+</blockquote>
+<ul>
+<li>preg_match(‘&#x2F;^Welcome to GEEK 2023!$&#x2F;i’, $_GET[‘syc’]) &amp;&amp; $_GET[‘syc’] !&#x3D;&#x3D; ‘Welcome to GEEK 2023!’)</li>
+</ul>
+<p>通过&#x2F;i 不区分大小写进行绕过</p>
+<ul>
+<li>intval($_GET[‘lover’]) &lt; 2023 &amp;&amp; intval($_GET[‘lover’] + 1) &gt; 2024)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int intval( var,base)</span><br><span class="line">//var指要转换成 integer 的数量值,base指转化所使用的进制 </span><br><span class="line">Note: </span><br><span class="line">如果 base 是 0，通过检测 var 的格式来决定使用的进制： </span><br><span class="line">◦ 如果字符串包括了 &quot;0x&quot; (或 &quot;0X&quot;) 的前缀，使用 16 进制 (hex)；否则，  </span><br><span class="line">◦ 如果字符串以 &quot;0&quot; 开始，使用 8 进制(octal)；否则，  </span><br><span class="line">◦ 将使用 10 进制 (decimal)。 </span><br></pre></td></tr></table></figure>
+
+<p>即intval(‘1e10’)——&gt;int(1)</p>
+<p>intval(‘1e10’+1)——&gt;int(1410065408+1)</p>
+<ul>
+<li>if (isset($_POST[‘SYC_GEEK.2023’])&amp;&amp;($_POST[‘SYC_GEEK.2023’]&#x3D;”Happy to see you!”)</li>
+</ul>
+<p>POST传参时名改为 SYC[GEEK.2023 绕过</p>
+<hr>
 
   </div>
   
@@ -2609,10 +2652,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-16T21:21:28+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-01T23:42:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Oct 16, 2023</p>
+    <p>更新于：Nov 1, 2023</p>
   </a>
 </div>
 
@@ -2621,8 +2664,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/BUUCTF-%E5%BA%8F%E5%88%97%E5%8C%96/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>-BUUCTF -序列化</p></a></div>
-  <span hidden itemprop="keywords">-BUUCTF -序列化</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/php-%E5%BA%8F%E5%88%97%E5%8C%96-http/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>-php -序列化 -http</p></a></div>
+  <span hidden itemprop="keywords">-php -序列化 -http</span>
 
 
         
@@ -2635,7 +2678,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/10/16/%E6%9E%81%E5%AE%A219-PHP/&title=极客19-PHP - Artemis&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/11/01/%E6%9E%81%E5%AE%A2/&title=极客 - Artemis&summary="
           
           >
           
@@ -2647,7 +2690,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/10/16/%E6%9E%81%E5%AE%A219-PHP/&title=极客19-PHP - Artemis&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/11/01/%E6%9E%81%E5%AE%A2/&title=极客 - Artemis&summary="
           
           >
           
@@ -2659,7 +2702,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/10/16/%E6%9E%81%E5%AE%A219-PHP/&title=极客19-PHP - Artemis&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/11/01/%E6%9E%81%E5%AE%A2/&title=极客 - Artemis&summary="
           
           >
           
@@ -2692,24 +2735,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>php函数绕过</p>
-          <p class='content'>(&#x3D;&#x3D;)与is_number()
-弱等于(&#x3D;&#x3D;)判断的时候，如果两边的类型不同，则先是将类型转换成相同的，再进行比较
-强等于(&#x3D;&#x3D;&#...</p>
+        <a class='prev' href='/2023/11/27/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>反序列化</p>
+          <p class='content'>反序列化一、魔术方法
+
+
+魔术方法
+触发
+
+
+
+__construct()
+类的构造函数
+
+
+__destruct()
+类的析构函数
+
+
+__call()
+在对象中调用一个不可访问方法时调用
+
+...</p>
         </a>
       
       
-        <a class='next' href='/2023/10/09/CTFHub-11/'>
-          <p class='title'>CTFHub-11<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>SSRF内网访问
-尝试访问位于127.0.0.1的flag.php吧
-
-直接访问127.0.0.1&#x2F;flag.php
-
-伪协议读取文件
-尝试去读取一下Web目录下的flag.php吧
-...</p>
+        <a class='next' href='/2023/10/24/MD5/'>
+          <p class='title'>MD5<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>MD5
+md5函数介绍为：
+md5( string , raw )
+string : 规定需要计算的字符串
+raw : 规定十六进制或二进制输出格式。
+​    true：16字符二进制格式
+​...</p>
         </a>
       
     </div>
@@ -2725,7 +2784,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/10/16/%E6%9E%81%E5%AE%A219-PHP/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/11/01/%E6%9E%81%E5%AE%A2/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -3597,7 +3656,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/10/16/极客19-PHP/","name":"极客19-PHP"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"极客19-PHP","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/10/16/%E6%9E%81%E5%AE%A219-PHP/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/10/16/%E6%9E%81%E5%AE%A219-PHP/","wordCount":0,"datePublished":"2023-10-16T13:08:21.000Z","dateModified":"2023-10-16T13:21:28.370Z","keywords":"-BUUCTF -序列化","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/11/01/极客/","name":"极客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"极客","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/11/01/%E6%9E%81%E5%AE%A2/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/11/01/%E6%9E%81%E5%AE%A2/","wordCount":0,"datePublished":"2023-11-01T13:08:21.000Z","dateModified":"2023-11-01T15:42:00.648Z","keywords":"-php -序列化 -http","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
