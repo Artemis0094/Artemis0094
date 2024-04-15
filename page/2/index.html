@@ -1755,7 +1755,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712682919166),
+    lastupdate: new Date(1713201822796),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2505,6 +2505,65 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/23/php函数绕过/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Artemis">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Artemis">
+    <meta itemprop="description" content="最是人间留不住，朱颜辞镜花辞树。">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/"  itemprop="url">
+        php函数绕过
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        (&#x3D;&#x3D;)与is_number()
+弱等于(&#x3D;&#x3D;)判断的时候，如果两边的类型不同，则先是将类型转换成相同的，再进行比较
+强等于(&#x3D;&#x3D;&#x3D;)判断的时候，先判断类型是否一样，不一样直接false，一样才比较。
+ php弱等于里面，默认类型转换时的将字符串转换成数字的机制是这样的：
+1 == “1admin” //true     ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-10-23T00:09:39+08:00">2023-10-23</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/10/23/php%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/09/CTFHub-11/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Artemis">
@@ -2588,20 +2647,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title"  itemprop="name headline">
       <a href="/2023/10/03/CTFHub-9/"  itemprop="url">
-        CTFHub-9
+        upload
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        upload一、无验证&#x2F;前端验证
+        upload一、CTFHub-upload1.无验证&#x2F;前端验证
 无验证：直接上传一句话木马.php，再用蚁剑连接。
 前端验证：尝试上传.php发现无法上传，通过view-source:url 发现可以上传.jpg文件，将.php改为.jpg再进行bp抓包，修改filename&#x3D;”1.php”和Content-Type: php，放包，蚁剑连接。
 
 
-二、.htaccess
-htaccess文件是Apa...
+2..htaccess...
       
     
   </div>
@@ -2770,7 +2828,7 @@ htaccess文件是Apa...
     
     <h2 class="article-title"  itemprop="name headline">
       <a href="/2023/09/16/CTFHub-6/"  itemprop="url">
-        CTFHub-6
+        信息泄露
       </a>
     </h2>
   
@@ -2830,7 +2888,7 @@ htaccess文件是Apa...
     
     <h2 class="article-title"  itemprop="name headline">
       <a href="/2023/09/13/CTFHub-5/"  itemprop="url">
-        CTFHub-5
+        备份文件下载
       </a>
     </h2>
   
@@ -2905,7 +2963,7 @@ rar
     
     <h2 class="article-title"  itemprop="name headline">
       <a href="/2023/09/12/CTFHub-4/"  itemprop="url">
-        CTFHub-4
+        SQL注入
       </a>
     </h2>
   
@@ -3078,63 +3136,6 @@ Basic 后疑似base84，进行解码发现为admin:password，意味着账号密
       
         <div>
           <a class='readmore' href='/2023/09/10/CTFHub-2/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/10/SICTF-Web-Include/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Artemis">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Artemis">
-    <meta itemprop="description" content="最是人间留不住，朱颜辞镜花辞树。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/09/10/SICTF-Web-Include/"  itemprop="url">
-        SICTF-Web-Include
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        SICTFInclude?SICTF&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;flag.php
-得到进行base64解码
-?SICTF&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-09-10T18:25:10+08:00">2023-09-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/09/10/SICTF-Web-Include/' itemprop="url">
             Read More
           </a>
         </div>

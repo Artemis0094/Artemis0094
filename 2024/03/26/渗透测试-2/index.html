@@ -39,11 +39,11 @@
 <meta property="og:title" content="渗透测试-2">
 <meta property="og:url" content="http://example.com/2024/03/26/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2/index.html">
 <meta property="og:site_name" content="Artemis">
-<meta property="og:description" content="渗透测试基础一、渗透测试网络协议基础1、网络协议分层 应用层 传输层 网络层 数据链路层 物理层  2、IP IP基本认识  IP的作用 IP与MAC的关系   IP地址的基础知识  IP地址的定义  IP地址的分类  公有IP与私有IP  IP地址与路由控制    IP协议相关技术  DNS域名解析 ARP与RARP协议 DHCP动态获取IP NAT网络地址转换 ICMP互联网控制报文协议">
+<meta property="og:description" content="渗透测试基础一、渗透测试网络协议基础1.网络协议分层 应用层 传输层 网络层 数据链路层 物理层  2.IP IP基本认识  IP的作用 IP与MAC的关系   IP地址的基础知识  IP地址的定义  IP地址的分类  公有IP与私有IP  IP地址与路由控制    IP协议相关技术  DNS域名解析 ARP与RARP协议 DHCP动态获取IP NAT网络地址转换 ICMP互联网控制报文协议">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-03-26T05:20:04.000Z">
-<meta property="article:modified_time" content="2024-04-09T17:13:43.047Z">
+<meta property="article:modified_time" content="2024-04-15T07:11:00.893Z">
 <meta property="article:author" content="weiwei">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1757,7 +1757,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712682919166),
+    lastupdate: new Date(1713201822796),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2568,14 +2568,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="渗透测试基础"><a href="#渗透测试基础" class="headerlink" title="渗透测试基础"></a>渗透测试基础</h2><h3 id="一、渗透测试网络协议基础"><a href="#一、渗透测试网络协议基础" class="headerlink" title="一、渗透测试网络协议基础"></a>一、渗透测试网络协议基础</h3><h4 id="1、网络协议分层"><a href="#1、网络协议分层" class="headerlink" title="1、网络协议分层"></a>1、网络协议分层</h4><ul>
+    <h2 id="渗透测试基础"><a href="#渗透测试基础" class="headerlink" title="渗透测试基础"></a>渗透测试基础</h2><h3 id="一、渗透测试网络协议基础"><a href="#一、渗透测试网络协议基础" class="headerlink" title="一、渗透测试网络协议基础"></a>一、渗透测试网络协议基础</h3><h4 id="1-网络协议分层"><a href="#1-网络协议分层" class="headerlink" title="1.网络协议分层"></a>1.网络协议分层</h4><ul>
 <li>应用层</li>
 <li>传输层</li>
 <li>网络层</li>
 <li>数据链路层</li>
 <li>物理层</li>
 </ul>
-<h4 id="2、IP"><a href="#2、IP" class="headerlink" title="2、IP"></a>2、IP</h4><ul>
+<h4 id="2-IP"><a href="#2-IP" class="headerlink" title="2.IP"></a>2.IP</h4><ul>
 <li><p>IP基本认识</p>
 <ul>
 <li>IP的作用</li>
@@ -2604,7 +2604,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 </ul>
-<h4 id="3、BurpSuite"><a href="#3、BurpSuite" class="headerlink" title="3、BurpSuite"></a>3、BurpSuite</h4><h4 id="4、HTTP"><a href="#4、HTTP" class="headerlink" title="4、HTTP"></a>4、HTTP</h4><ul>
+<h4 id="3-BurpSuite"><a href="#3-BurpSuite" class="headerlink" title="3.BurpSuite"></a>3.BurpSuite</h4><h4 id="4-HTTP"><a href="#4-HTTP" class="headerlink" title="4.HTTP"></a>4.HTTP</h4><ul>
 <li><p>HTTP基础知识</p>
 <ul>
 <li>HyperText Transfer Protocol——超文本协议传输，一个基于请求与响应，无状态的，应用层的协议。常基于TCP&#x2F;IP协议传输数据。</li>
@@ -2690,9 +2690,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>index of&#x2F;admin (目录浏览漏洞)</p>
 <hr>
-<h6 id="鹰图-https-hunter-qianxin-com"><a href="#鹰图-https-hunter-qianxin-com" class="headerlink" title="鹰图(https://hunter.qianxin.com/)"></a>鹰图(<a target="_blank" rel="noopener" href="https://hunter.qianxin.com/">https://hunter.qianxin.com/</a>)</h6><p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240404164631211.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240404164631211.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240404164631211"></p>
+<h4 id="鹰图"><a href="#鹰图" class="headerlink" title="鹰图"></a>鹰图</h4><p>(<a target="_blank" rel="noopener" href="https://hunter.qianxin.com/">https://hunter.qianxin.com/</a>)</p>
+<p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240404164631211.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240404164631211.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240404164631211"></p>
 <hr>
-<h6 id="SSL搜索"><a href="#SSL搜索" class="headerlink" title="SSL搜索"></a>SSL搜索</h6><p>crt.sh</p>
+<h4 id="SSL搜索"><a href="#SSL搜索" class="headerlink" title="SSL搜索"></a>SSL搜索</h4><p>crt.sh</p>
 <p><a target="_blank" rel="noopener" href="https://developer.facebook.com/tools/ct/search">https://developer.facebook.com/tools/ct/search</a></p>
 <hr>
 <p>被动查询可能没有收录，存在缺漏</p>
@@ -2793,9 +2794,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 </ul>
-<h3 id="CMS识别"><a href="#CMS识别" class="headerlink" title="CMS识别"></a>CMS识别</h3><p>CMS：内容管理系统，用于网站内容文章管理</p>
+<h4 id="CMS识别"><a href="#CMS识别" class="headerlink" title="CMS识别"></a>CMS识别</h4><p>CMS：内容管理系统，用于网站内容文章管理</p>
 <p>常见CMS：WordPress、Joomla、Drupal、dedecms、Discuz、phpcms等</p>
-<h3 id="敏感文件、目录"><a href="#敏感文件、目录" class="headerlink" title="敏感文件、目录"></a>敏感文件、目录</h3><ul>
+<h4 id="敏感文件、目录"><a href="#敏感文件、目录" class="headerlink" title="敏感文件、目录"></a>敏感文件、目录</h4><ul>
 <li><p>常见敏感文件或目录</p>
 <ul>
 <li>robots.txt</li>
@@ -2891,6 +2892,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 </ul>
+<hr>
+<h3 id="四、WEB安全-基础环境搭建"><a href="#四、WEB安全-基础环境搭建" class="headerlink" title="四、WEB安全-基础环境搭建"></a>四、WEB安全-基础环境搭建</h3><h4 id="1-WAMP搭建靶场"><a href="#1-WAMP搭建靶场" class="headerlink" title="1.WAMP搭建靶场"></a>1.WAMP搭建靶场</h4><ul>
+<li><p>下载phpstudy</p>
+<p><a target="_blank" rel="noopener" href="https://www.xp.cn/download.html">https://www.xp.cn/download.html</a></p>
+</li>
+<li><p>dvwa</p>
+</li>
+<li><p>sqlilabs</p>
+</li>
+<li><p>uploadlabs</p>
+</li>
+</ul>
+<h4 id="2-LAMP搭建靶场"><a href="#2-LAMP搭建靶场" class="headerlink" title="2.LAMP搭建靶场"></a>2.LAMP搭建靶场</h4><ul>
+<li>拉取</li>
+</ul>
+<p>  docker pull</p>
+<p>  mkdir -p &#x2F;root&#x2F;dvwa&#x2F;app</p>
+<p>  cd &#x2F;root&#x2F;dvwa&#x2F;</p>
+<p>  sudo docker run -dit -p “8088:80” -v ${PWD}&#x2F;app:&#x2F;app</p>
+<ul>
+<li><p>下载dvwa压缩包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/digininja/DVWA/archive/master.zip</span><br></pre></td></tr></table></figure>
+
+<p>拉取不下的话则在本地机器下载后拉取至其路径下</p>
+</li>
+<li><p>配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root/dvwa/app/dvwa/config</span><br><span class="line">cp config.inc.php.dist config.inc.php</span><br><span class="line">vim config.inc.php</span><br></pre></td></tr></table></figure>
+
+<p>修改：</p>
+<p>db_user &#x3D; “root”</p>
+<p>db_password &#x3D; “”</p>
+<p>保存</p>
+</li>
+</ul>
+<h3 id="五、漏洞挖掘方式"><a href="#五、漏洞挖掘方式" class="headerlink" title="五、漏洞挖掘方式"></a>五、漏洞挖掘方式</h3><p>上传储存型xss</p>
+<p>xss.pdf（中低危）</p>
+<p>xss.html（中高危）</p>
+<p>xxe漏洞</p>
+<p>xml外部执行注入</p>
+<hr>
+<h3 id="六、SQL注入"><a href="#六、SQL注入" class="headerlink" title="六、SQL注入"></a>六、SQL注入</h3><hr>
+<h3 id="七、命令执行漏洞"><a href="#七、命令执行漏洞" class="headerlink" title="七、命令执行漏洞"></a>七、命令执行漏洞</h3><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415134927371.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415134927371.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240415134927371"></p>
+<h4 id="2-PHP执行函数"><a href="#2-PHP执行函数" class="headerlink" title="2.PHP执行函数"></a>2.PHP执行函数</h4><ul>
+<li>eval</li>
+</ul>
+<p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415142354090.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415142354090.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240415142354090"></p>
+<ul>
+<li>assert</li>
+</ul>
+<p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415142500971.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415142500971.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240415142500971"></p>
+<ul>
+<li>call_user_func</li>
+</ul>
+<p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415142543769.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415142543769.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240415142543769"></p>
+<ul>
+<li>call_user_func_array</li>
+</ul>
+<p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415143051859.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415143051859.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240415143051859"></p>
+<h4 id="3-系统命令执行"><a href="#3-系统命令执行" class="headerlink" title="3.系统命令执行"></a>3.系统命令执行</h4><p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415143724549.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415143724549.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240415143724549"></p>
+<h4 id="4-PHP系统命令执行函数"><a href="#4-PHP系统命令执行函数" class="headerlink" title="4.PHP系统命令执行函数"></a>4.PHP系统命令执行函数</h4><p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415144536278-17131635367751.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415144536278-17131635367751.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240415144536278"></p>
+<p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415145157852.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415145157852.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240415145157852"></p>
+<p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415145558861.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415145558861.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240415145558861"></p>
+<h4 id="5-命令执行常用特殊字符"><a href="#5-命令执行常用特殊字符" class="headerlink" title="5.命令执行常用特殊字符"></a>5.命令执行常用特殊字符</h4><p><img src="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415150130812-17131644921363.png" class="lazyload" data-srcset="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2.assets/image-20240415150130812-17131644921363.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240415150130812"></p>
+<ul>
+<li>cmd1|cmd2</li>
+<li>cmd1;cmd2</li>
+<li>cmd1||cmd2</li>
+<li>cmd1&amp;&amp;cmd2</li>
+<li>cmd2$(cmd):echo $(whoami)</li>
+<li>‘cmd’</li>
+</ul>
 
   </div>
   
@@ -2915,10 +2987,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-10T01:13:43+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-15T15:11:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 10, 2024</p>
+    <p>更新于：Apr 15, 2024</p>
   </a>
 </div>
 
@@ -3076,7 +3148,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80"><span class="toc-text">渗透测试基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80"><span class="toc-text">一、渗透测试网络协议基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%88%86%E5%B1%82"><span class="toc-text">1、网络协议分层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81IP"><span class="toc-text">2、IP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81BurpSuite"><span class="toc-text">3、BurpSuite</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81HTTP"><span class="toc-text">4、HTTP</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E4%BD%93"><span class="toc-text">请求体</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E4%BD%93"><span class="toc-text">响应体</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HTTPS%E4%B8%8EHTTP"><span class="toc-text">HTTPS与HTTP</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9F%9F%E5%90%8D%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="toc-text">二、域名信息收集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CDN"><span class="toc-text">CDN</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%BD%91%E7%AB%99%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="toc-text">三、网站信息收集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">操作系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E6%9C%8D%E5%8A%A1%E3%80%81%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">网站服务、容器类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-text">脚本类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据库类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMS%E8%AF%86%E5%88%AB"><span class="toc-text">CMS识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%8F%E6%84%9F%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95"><span class="toc-text">敏感文件、目录</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80"><span class="toc-text">渗透测试基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80"><span class="toc-text">一、渗透测试网络协议基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%88%86%E5%B1%82"><span class="toc-text">1.网络协议分层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-IP"><span class="toc-text">2.IP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-BurpSuite"><span class="toc-text">3.BurpSuite</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-HTTP"><span class="toc-text">4.HTTP</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E4%BD%93"><span class="toc-text">请求体</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E4%BD%93"><span class="toc-text">响应体</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HTTPS%E4%B8%8EHTTP"><span class="toc-text">HTTPS与HTTP</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9F%9F%E5%90%8D%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="toc-text">二、域名信息收集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%B9%B0%E5%9B%BE"><span class="toc-text">鹰图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SSL%E6%90%9C%E7%B4%A2"><span class="toc-text">SSL搜索</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CDN"><span class="toc-text">CDN</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%BD%91%E7%AB%99%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="toc-text">三、网站信息收集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">操作系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E6%9C%8D%E5%8A%A1%E3%80%81%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">网站服务、容器类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-text">脚本类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据库类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CMS%E8%AF%86%E5%88%AB"><span class="toc-text">CMS识别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%8F%E6%84%9F%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95"><span class="toc-text">敏感文件、目录</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81WEB%E5%AE%89%E5%85%A8-%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">四、WEB安全-基础环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-WAMP%E6%90%AD%E5%BB%BA%E9%9D%B6%E5%9C%BA"><span class="toc-text">1.WAMP搭建靶场</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-LAMP%E6%90%AD%E5%BB%BA%E9%9D%B6%E5%9C%BA"><span class="toc-text">2.LAMP搭建靶场</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%96%B9%E5%BC%8F"><span class="toc-text">五、漏洞挖掘方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81SQL%E6%B3%A8%E5%85%A5"><span class="toc-text">六、SQL注入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E"><span class="toc-text">七、命令执行漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="toc-text">1.简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-PHP%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="toc-text">2.PHP执行函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C"><span class="toc-text">3.系统命令执行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-PHP%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="toc-text">4.PHP系统命令执行函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%B8%B8%E7%94%A8%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="toc-text">5.命令执行常用特殊字符</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -3906,7 +3978,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/26/渗透测试-2/","name":"渗透测试-2"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"渗透测试-2","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/26/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/26/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2/","wordCount":0,"datePublished":"2024-03-26T05:20:04.000Z","dateModified":"2024-04-09T17:13:43.047Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/26/渗透测试-2/","name":"渗透测试-2"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"渗透测试-2","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/26/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/26/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-2/","wordCount":0,"datePublished":"2024-03-26T05:20:04.000Z","dateModified":"2024-04-15T07:11:00.893Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

